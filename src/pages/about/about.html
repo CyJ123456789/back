@@ -1,0 +1,51 @@
+
+<ion-content>
+  <!--顶部输入框-->
+  <div class="answers">
+    <img src="./assets/imgs/search.png" alt="" class="img1">
+    <input type="text" placeholder="搜索健康说标题" class="input1" (focus)="nav.goPage(comment)">
+    <p>
+      <img src="./assets/imgs/alert2.png" alt="" class="img2">
+    </p>
+  </div>
+  <div style="background-color: #fff;margin-top: 80px">
+    <div class="d-2" (tap)="quick1()">
+      <p class="p1">健康说</p>
+      <p class="p2">说说您感兴趣的话题...</p>
+    </div>
+    <hr>
+    <div class="d-3">
+      <span style="font-size: 15px">最新健康说</span>
+    </div>
+  </div>
+  <ul class="u1" #u1>
+    <li *ngFor="let item of querylist; index as i;" class="item.question_id"  (tap)="sum_skip(item,item.question_id)">
+      <p class="p4">
+        <img [src]="item.head_portrait" alt="">
+        <span style="color: #2b3642">{{item.nickname}}</span>
+      </p>
+      <p class="p17">{{item.dateTime}}</p>
+      <p style="margin-bottom: 10px">{{item.title}}</p>
+      <span style="color: #666666" [innerHTML]="item.content1"></span>
+      <div class="picture">
+        <img *ngIf="item.picture" [src]="item.picture" alt="">
+        <img *ngIf="item.picture2" [src]="item.picture2" alt="">
+        <img *ngIf="item.picture3" [src]="item.picture3" alt="">
+      </div>
+      <div class="div1">
+        <p>
+          <img src="./assets/fonts/like.png" alt="">
+          <span>{{item.view_count}}</span>
+        </p>
+        <p class="p5">
+          <img src="./assets/fonts/reply.png" alt="">
+          <span>{{item.num}}</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+  <p (tap)="load()" class="load">
+    <span>加载更多</span>
+    <ion-icon name="refres"></ion-icon>
+  </p>
+</ion-content>

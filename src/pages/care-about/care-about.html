@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CareAboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="about">
+    <span class="spn1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>我关心的人</span>
+  </div>
+
+  <ul class="main_text">
+    <li *ngFor="let item of kinsfolk">
+      <div class="list_left" (click)="nav.goPage(detail,{nimabi:item})">
+        <div class="content_left">
+          <img class="personel" src="./assets/fonts/portrait.png">
+          <span class="nickname">{{item.nickname}}</span>
+        </div>
+      </div>
+      <p class="{{item.concern_id}}" (tap)="delete($event)"></p>
+    </li>
+  </ul>
+  <p class="p1" (tap)="about()">
+    <span class="span1">+</span>
+    <span class="span2">添加其他人</span>
+  </p>
+</ion-content>

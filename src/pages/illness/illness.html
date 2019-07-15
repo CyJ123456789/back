@@ -1,0 +1,33 @@
+<!--
+  Generated template for the IllnessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+  <div class="illness">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>疾病概述</span>
+  </div>
+  <div class="d-2">
+    <p class="p1">{{disease_name_cn}}</p>
+    <pre class="p2" [innerHTML]="defination"></pre>
+  </div>
+  <!--<ul class="u1">
+    <li>
+      <p>简介</p>
+      <p class="p1">{{defination}}</p>
+    </li>
+    <li>
+      <p>治疗方案</p>
+      <p class="p1">{{treatment}}</p>
+    </li>
+    <li class="p1">
+      <p>治疗药物</p>
+      <p class="p1"></p>
+    </li>
+  </ul>-->
+</ion-content>

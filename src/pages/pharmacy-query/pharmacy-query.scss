@@ -1,0 +1,42 @@
+page-pharmacy-query {
+  #map{
+    width: 100%;
+    height: 100%;
+    margin-top: 36px;
+    overflow: hidden;
+    margin:0;
+    margin-top: 40px;
+  }
+  #r-result{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    display:flex;
+    flex-wrap: nowrap;
+    input{
+      display: block;
+      width: 97%;
+      height:40px;
+      margin-left: 8px;
+      margin-right: 25px;
+      padding-left:30px;
+      padding-right: 40px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+    }
+    .span1{
+      position: absolute;
+      top:9px;
+      color: gray;
+      left: 16px;
+      font-size:30px;
+    }
+    .span2{
+      position: absolute;
+      top: 10px;
+      left: 82%;
+      color: gray;
+    }
+  }
+}

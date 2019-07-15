@@ -1,0 +1,93 @@
+page-find-drug {
+  .content {
+    background-color: #fff;
+    position: relative;
+    .d-1 {
+      width: 100%;
+      height: 80px;
+      line-height: 45px;
+      display: flex;
+      background-color: #3BD065;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      padding-top: 30px;
+      .fangdajing{
+        position: absolute;
+        top:42px;
+        left: 18px;
+        width: 20px;
+        height: 20px;
+      }
+      input {
+        background-color: #fff;
+        border: none;
+        border-radius: 16px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 7px;
+        width: 82%;
+        padding-left: 30px;
+        height: 30px;
+      }
+      span {
+        color: #fff;
+        font-size: 1.4rem;
+      }
+    }
+    .select{
+      margin-top: 80px;
+      height: 40px;
+      background-color: #ddd;
+      padding-top: 5px;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 5px;
+      span{
+        padding: 3px;
+        font-weight: bolder;
+        color: #000;
+      }
+      .first{
+        color:orange;
+        border-bottom: 2px solid orange;
+      }
+    }
+    .u1{
+      list-style-type: none;
+      margin: 0;
+      padding:20px 15px;
+      p{
+        border-bottom:1px solid  #EAEAEA;
+        padding-bottom:5px;
+      }
+      li{
+        padding: 10px 0;
+        border-bottom: 1px solid  #EAEAEA;
+      }
+    }
+    .u2{
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:82px;
+      background-color: #fff;
+      z-index: 2;
+      list-style-type: none;
+      margin: 0;
+      padding:20px 15px;
+     li{
+       padding: 10px 0;
+       border-bottom: 1px solid  #EAEAEA;
+     }
+    }
+    .explain{
+      p{
+        font-size: 12px;
+        padding: 0 25px;
+      }
+    }
+  }
+}

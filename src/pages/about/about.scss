@@ -1,0 +1,157 @@
+page-about {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    background-color: #ddd;
+    .answers{
+      width: 100%;
+      padding-top: 20px;
+      height: 80px;
+      line-height: 45px;
+      display: flex;
+      background-color: #3BD065;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      input {
+        background-color: #fff;
+        border: none;
+        border-radius: 16px;
+        margin-left: 10px;
+        margin-top: 7px;
+        width: 81%;
+        padding-left: 45px;
+        height: 30px;
+      }
+      .img1 {
+        position: absolute;
+        top: 32px;
+        left: 21px;
+        width: 23px;
+        height: 20px;
+      }
+      p {
+        position: relative;
+        margin-top: 8px;
+        margin-left: 4%;
+        padding: 2px;
+        width: 26px;
+        height: 26px;
+        background-color: #fff;
+        border-radius: 50%;
+        img {
+          position: absolute;
+          top: 2.5px;
+          left: 2.5px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .d-2{
+      p{
+        text-align: center;
+        padding-top: 12px;
+      }
+      .p1{
+        color:#3BD065;
+      }
+      .p2{
+        color: #D4D4D4;
+      }
+    }
+    hr{
+      background-color: #3BD065;
+      margin-top: 15px;
+    }
+    .d-3{
+      display: flex;
+      padding: 0 10px;
+      p{
+        margin-left: 57%;
+        display: flex;
+        span{
+          color:#3BD065 ;
+        }
+        ion-icon{
+          margin-top: 3px;
+          margin-left: 5px;
+        }
+      }
+    }
+    .u1{
+      list-style-type: none;
+      li{
+        padding-left: 10px;
+        padding-top: 20px;
+        background-color: #fff;
+        padding-bottom:15px;
+        margin-bottom: 10px;
+        position: relative;
+        p.p17{
+          position: absolute;
+          top: 40px;
+          right:10px;
+          text-align: right;
+          color: #666666;
+        }
+        p.p4{
+          margin: 0;
+          padding: 0;
+          height: 32px;
+          display: flex;
+          img{
+            width: 26px;
+            height: 26px;
+            margin-top: 2px;
+            margin-right: 5px;
+            border-radius: 50%;
+          }
+          span{
+            margin-left: 10px;
+            margin-top: 13px;
+          }
+        }
+        .div1{
+          margin-top: 15px;
+          display: flex;
+        }
+        .picture{
+          margin: 10px 0 15px 0;
+          list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          img{
+            width:40%;
+            height: 100px;
+            margin-right:15px;
+            margin-top: 10px;
+          }
+        }
+        p{
+          margin: 0;
+          padding: 0;
+          position: relative;
+          span{
+            position: absolute;
+            top:-7px;
+            left: 23px;
+            color: #ddd;
+          }
+        }
+        p.p5{
+          margin: 0;
+          padding: 0;
+          margin-top: 3px;
+          margin-left:80%;
+        }
+      }
+    }
+    .load{
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CheckDiseasePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content>
+  <div class="d-1">
+    <img src="./assets/imgs/search.png" alt="" class="fangdajing">
+    <input  type="text"  placeholder="搜索疾病" class="input1" (keyup)="change()" [(ngModel)]="search">
+    <span (tap)="nav.backPage()">取消</span>
+  </div>
+
+  <ul class="u1">
+    <li *ngFor="let item of list"  (tap)="nav.goPage(onePage,{oneMessage:item})">{{item.Disease_one_list_name}}</li>
+  </ul>
+
+  <!--<ul class="u1">
+    <li *ngFor="let item of list"  (tap)="onClick($event)">{{item.Disease_one_list_name}}</li>
+  </ul>
+  <ul class="u2" #ul>
+    <li *ngFor="let item of item" (tap)="onClick1($event)">{{item.Disease_two_list_name}}</li>
+  </ul>-->
+  <ul class="u2" #u2>
+    <li *ngFor="let item of item1" (tap)="nav.goPage(illness,{illness:item})">{{item.disease_name_cn}}</li>
+  </ul>
+
+</ion-content>

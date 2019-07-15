@@ -1,0 +1,31 @@
+<!--
+  Generated template for the YiZhuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="content">
+  <div class="yiZhu">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <p>我的医嘱</p>
+  </div>
+  <img src="./assets/fonts/1.png" alt="" width="22px" height="22px" style="position: absolute;top: 17%;left:34%">
+  <img src="./assets/fonts/5.png" alt="" width="24px" height="21px" style="position: absolute;top: 15%;left:45%">
+  <img src="./assets/fonts/3.png" alt="" width="24px" height="21px" style="position: absolute;top: 13%;left:58%">
+  <img src="./assets/fonts/4.png" alt="" width="22px" height="22px" style="position: absolute;top: 11%;left:70%">
+  <img src="./assets/fonts/2.png" alt="" width="22px" height="22px" style="position: absolute;top: 11%;left:82%">
+  <img src="./assets/fonts/8.png" alt="" width="21px" height="21px" style="position: absolute;top: 7%;left:94%">
+  <ul class="yiZhuList">
+    <li (tap)="nav.goPage(text)">
+      <img src="./assets/fonts/textYiZhu.gif" alt="">
+    </li>
+    <li (tap)="nav.goPage(picture)">
+      <img src="./assets/fonts/pictureYiZhu.gif" alt="">
+    </li>
+    <li (tap)="nav.goPage(doctor)">
+      <img src="./assets/fonts/audioYiZhu.gif" alt="">
+    </li>
+  </ul>
+</ion-content>

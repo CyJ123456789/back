@@ -1,0 +1,39 @@
+<!--
+  Generated template for the DrugUseRecordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="druguserecord">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>{{concern}}的用药记录</span>
+  </div>
+  <!--<ul class="u1">
+    <li *ngFor="let item of druglist">{{item.drug}}</li>
+  </ul>-->
+  <ul class="u1">
+    <li *ngFor="let item of druglist">
+      <h5>{{item.drug}}</h5>
+      <p>
+        <span>创建日期</span>
+        <span>{{item.creationtime}}</span>
+      </p>
+      <p>
+        <span>服用周期</span>
+        <span>{{item.Taking_cycle}}天</span>
+      </p>
+      <p>
+        <span>服用频率</span>
+        <span>{{item.doses_hz}}次</span>
+      </p>
+      <p>
+        <span>服用剂量</span>
+        <span>{{item.doses_quantity}}片</span>
+      </p>
+    </li>
+  </ul>
+  <p #none class="none">暂无用药记录</p>
+</ion-content>

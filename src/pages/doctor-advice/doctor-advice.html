@@ -1,0 +1,47 @@
+<!--
+  Generated template for the DoctorAdvicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="doctor_advice">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>我的医嘱</span>
+  </div>
+  <ul class="doctor_list">
+    <li *ngFor="let item of audioList;index as i">
+      <p>{{item.record_name}}</p>
+      <div>
+        <p class="record_img">
+          <img src="./assets/record_img/record-img.png" alt="">
+        </p>
+        <p class="volume">
+          <img src="./assets/record_img/strip.png" alt="" class="big">
+          <img src="./assets/record_img/volume.png" alt="" class="small">
+        </p>
+        <p>{{item.time}}"</p>
+        <p class="pause" (tap)="stop(item)">
+          <img src="./assets/record_img/pause.png" alt="">
+        </p>
+        <p class="pause" (tap)="play(item)">
+          <img src="./assets/record_img/stop.png" alt="">
+        </p>
+        <p class="pause" (tap)="pauseRecord(item)">
+          <img src="./assets/record_img/play.png" alt="">
+        </p>
+        <p class="pause" (tap)="delete(i)">
+          <img src="./assets/record_img/delete.png" alt="">
+        </p>
+      </div>
+    </li>
+  </ul>
+  <div class="caozuo">
+    <p (tap)="startReocrd()" #record>
+      <img src="./assets/record_img/microphone.png" alt="">
+    </p>
+    <h5 class="inner" #inner>开始录音</h5>
+  </div>
+</ion-content>

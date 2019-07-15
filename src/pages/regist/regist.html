@@ -1,0 +1,37 @@
+<!--
+  Generated template for the RegistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <!--<div class="top">
+    <img src="../assets/fonts/back.png" alt="" width="30px" height="30px" (tap)=" nav.backPage()">
+    <span>注册</span>
+  </div>
+  <p class="p4">
+    <img src="../assets/imgs/1.jpg" alt="">
+    <span>用药通</span>
+  </p>-->
+  <div class="regist">
+    <p (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </p>
+    <span class="spn1">注册</span>
+  </div>
+  <div class="d1">
+    <div>
+      <img src="./assets/fonts/phone.png" alt="">
+      <input type="text" placeholder="请输入手机号" [(ngModel)]="phone" (focus)="phonefocus()" >
+      <p #p3 class="p3">手机号格式不正确</p>
+    </div>
+    <div class="d2">
+      <input type="text" placeholder="输入验证码" [(ngModel)]="code"  (focus)="codefocud()">
+      <button #btn (tap)="verified()">获取验证码</button>
+      <p #p4 class="p3">验证码输入错误，请重新输入</p>
+    </div>
+    <button round  (tap)="regist()" class="regist1">注册</button>
+  </div>
+  <p style="background-color: transparent;height:5px;margin-top: 200px" #clavier></p>
+</ion-content>
+

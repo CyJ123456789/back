@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="drug_list">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>用药列表</span>
+  </div>
+  <div class="parent">
+    <ul class="alert_list" *ngFor="let item of list">
+      <li>
+        <div class="detail" (tap)="nav.goPage(allertDetail,{item1:item})">
+          <h4 class="top_drug">{{item.drug}}</h4>
+          <div class="bottom_drug">
+            <p style="color: #9C9C9C;margin-right: 20px">每天{{item.doses_hz}}次</p>
+            <p>
+              <img class="medicineBottle" src="./assets/fonts/medicine_bottle.png">
+              <span class="removeBottom">{{item.doses_quantity}}</span>
+            </p>
+            <p>
+              <img class="personel" src="./assets/fonts/personel.png">
+              <span class="removeBottom">{{item.nickname}}</span>
+            </p>
+          </div>
+        </div>
+        <h5 class="{{item.take_medicine_id}}" (tap)="delete($event)">删除</h5>
+      </li>
+    </ul>
+  </div>
+  <p class="p1" (tap)="nav.goPage(allertDetail,{guardian:{'guardainid':guardainid,'nickname':nickName}})">
+    <span class="span1">+</span>
+    <span class="span2">用药添加</span>
+  </p>
+</ion-content>

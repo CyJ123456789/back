@@ -1,0 +1,66 @@
+page-contact {
+  *{
+    margin:0;
+    padding:0;
+  }
+  .content{
+    background-color: #ddd;
+    .d-1{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      background-color:#3BD065 ;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      span{
+        display:block;
+        margin-top: 25px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+      }
+    }
+    .physician{
+      margin-top: 80px;
+      li{
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding:10px 10px;
+        div{
+          display: flex;
+          width: 80%;
+          img{
+            margin-top: 9%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+          }
+          p{
+            margin: 0;
+            padding: 0;
+            margin-left: 15px;
+            span{
+              display: block;
+              margin-bottom: 10px;
+            }
+            span.name{
+              font-weight: bolder;
+              font-size:1.7rem;
+            }
+            span.yiyang{
+              color: #9C9C9C;
+            }
+          }
+        }
+        p.chat{
+          color: #3BD065;
+          margin-left: 75px;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,118 @@
+page-quick-question {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .content{
+    background-color: #ddd;
+    .d-1{
+      width: 100%;
+      height: 80px;
+      background-color:  #3BD065;
+      padding-top: 35px;
+      position: relative;
+      span{
+        position: absolute;
+        color: #fff;
+        font-size: 15px;
+        top: 35px;
+      }
+      .span1{
+        width: 50px;
+        height: 40px;
+        left: 4%;
+        z-index: 2;
+      }
+      .span2{
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+      }
+      .span3{
+        width: 50px;
+        right: 4%;
+        z-index: 2;
+        text-align: right;
+      }
+    }
+    .d-2{
+      position: relative;
+      .d-3{
+        width: 90%;
+        margin: 0 auto;
+        padding:5px 10px 80px 7px;
+        border: 1px solid #C0C0C0;
+        border-radius: 8px;
+        position: relative;
+      }
+      .headline{
+        margin-top: 40px;
+        border-bottom:1px solid #C0C0C0;
+        margin-left:12px;
+        width: 90%;
+        input{
+          border: none;
+          width: 83%;
+          height: auto;
+          background-color: #ddd;
+        }
+      }
+      p.body{
+        margin: 20px 0;
+        margin-left:12px;
+      }
+
+      p.main-body{
+        margin: 0;
+        padding: 0;
+        width: 85%;
+        position: absolute;
+        top:85px;
+        left: 26px;
+        z-index: -1;
+        text-align: justify;
+        color: #9C9C9C;
+      }
+
+    }
+    .picture{
+      width: 95%;
+      margin: 0 auto;
+      ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        li{
+          width: 30%;
+          height: 80px;
+          border-radius: 5px;
+          margin:15px 1%;
+
+        }
+        .camera{
+          width: 100%;
+          margin-top: 15px;
+          .impose{
+            width: 100%;
+            text-align: center;
+            color: #9C9C9C;
+          }
+          .chosee{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            span{
+              img{
+                width: 45px;
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

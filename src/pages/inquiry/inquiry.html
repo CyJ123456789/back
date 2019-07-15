@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="inquiry">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>健康说</span>
+  </div>
+  <!-- 提问者信息显示 -->
+  <div class="d-2">
+    <p style="margin-bottom: 10px">{{title}}</p>
+    <p class="p1">
+      <img src="{{head_portrait}}" alt="">
+      <span>{{nickname}}</span>
+    </p>
+    <p class="p4" style="color: #2b3642" [innerHTML]="content"></p>
+    <div class="picture">
+      <img *ngIf="picture" [src]="picture" (tap)="big($event)">
+      <img *ngIf="picture2" [src]="picture2" (tap)="big($event)">
+      <img *ngIf="picture3" [src]="picture3" (tap)="big($event)">
+    </div>
+  </div>
+  <!--  评论区 -->
+  <ul class="u1">
+    <p class="p2">评论 <span>（{{lenght}}）</span></p>
+    <li *ngFor="let item of comment_list">
+      <p class="p3">
+        <img src="{{item.head_portrait}}" alt="">
+        <span class="span1">{{item.nickname}}</span>
+        <span class="span2">{{item.datetime}}</span>
+      </p>
+      <p class="p5" [innerHTML]="item.content"></p>
+    </li>
+  </ul>
+  <div class="magnify" #panel (tap)="hidden()">
+    <img src="" alt="" #bigImg>
+  </div>
+</ion-content>
+<ion-footer class="footer">
+  <div class="discuss">
+    <p class="placehold" #placehold>
+      <img src="./assets/fonts/comment.png" alt="">
+      写评论
+    </p>
+    <p contenteditable="true" class="matter" #matter></p>
+    <p class="send" (tap)="issue()">发布</p>
+  </div>
+</ion-footer>

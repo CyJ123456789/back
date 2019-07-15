@@ -1,0 +1,66 @@
+<!--
+  Generated template for the MyFavoritePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="myfavorite">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>我的收藏</span>
+  </div>
+  <ul class="main_body">
+    <li *ngFor="let item of data6;index as i" class="item1">
+      <div (click)="nav.goPage(detail,{title:item.article_id})" class="man_body">
+        <img [src]="item.picture" alt="">
+        <div>
+          <p class="headline">{{item.headline}}</p>
+          <p class="author" style="margin-top: 15px;color: #9C9C9C">作者：{{item.author}}</p>
+        </div>
+      </div>
+      <h5 (tap)="delete($event)" class="{{item.article_id}}"></h5>
+    </li>
+    <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多。。。。">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>-->
+  </ul>
+  <!--<ion-list no-lines class="list1" id="parent">
+    &lt;!&ndash; 刚进页面时的界面显示 &ndash;&gt;
+    <ion-item *ngFor="let item of data6;index as i" class="item1">
+      <div (click)="nav.goPage(detail,{title:item.article_id})">
+        <img [src]="item.picture" alt="" width="140px" height="90px">
+        <p>
+          <span class="headline">{{item.headline}}</span>
+          <span>{{item.author}}&nbsp;&nbsp;&nbsp;{{time3[i]}}</span>
+        </p>
+      </div>
+      <hr>
+      <button float-end (tap)="delete($event)" class="{{item.article_id}}">删除</button>
+    </ion-item >
+    &lt;!&ndash; 下拉刷新时的界面显示 &ndash;&gt;
+    <ion-item  *ngFor="let item1 of data3;index as i" class="item1">
+      <div (click)="nav.goPage(detailpage,{title:item1.article_id})">
+        <img [src]="item1.picture" alt="" width="140px" height="90px">
+        <p>
+          <span >{{item1.headline}}</span>
+          <span>{{item1.author}}&nbsp;&nbsp;&nbsp;{{time4[i]}}</span>
+        </p>
+      </div>
+      <hr>
+      <button float-end (tap)="delete()">删除</button>
+    </ion-item >
+    &lt;!&ndash; 下拉刷新 &ndash;&gt;
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多。。。。">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-list>-->
+  <p class="shou" #shou>暂无收藏记录</p>
+</ion-content>

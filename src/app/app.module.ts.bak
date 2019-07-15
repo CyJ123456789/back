@@ -1,0 +1,150 @@
+import { NgModule, ErrorHandler,} from '@angular/core';
+import { Camera} from '@ionic-native/camera';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { BrowserModule } from '@angular/platform-browser';
+import { IonicApp, IonicModule, IonicErrorHandler,Navbar} from 'ionic-angular';
+import { Keyboard } from '@ionic-native/keyboard';
+import { MyApp } from './app.component';
+import {IndexPageModule} from "../pages/index/index.module";
+import {MessagePageModule} from "../pages/message/message.module";
+import {InquiryPageModule} from "../pages/inquiry/inquiry.module";
+import {QueryPageModule} from "../pages/query/query.module";
+import {FindDrugPageModule} from "../pages/find-drug/find-drug.module";
+import {CheckDiseasePageModule} from "../pages/check-disease/check-disease.module";
+import {PharmacyQueryPageModule} from "../pages/pharmacy-query/pharmacy-query.module";
+import {QuickQuestionPageModule} from "../pages/quick-question/quick-question.module";
+import {DetailPageModule} from "../pages/detail/detail.module";
+import {MyPhysicianVisitsPageModule} from "../pages/my-physician-visits/my-physician-visits.module";
+import {CareAboutPageModule} from "../pages/care-about/care-about.module";
+import {AlerganPageModule} from "../pages/alergan/alergan.module";
+import {MyFavoritePageModule} from "../pages/my-favorite/my-favorite.module";
+import {MedicalHistoryPageModule} from "../pages/medical-history/medical-history.module";
+import {RegistPageModule} from "../pages/regist/regist.module";
+import {DrugUseRecordPageModule} from "../pages/drug-use-record/drug-use-record.module";
+import {DrugDetailPageModule} from "../pages/drug-detail/drug-detail.module";
+import {LoginPageModule} from "../pages/login/login.module";
+import {PersonelPageModule} from "../pages/personel/personel.module";
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { HomePage } from '../pages/home/home';
+import {Insomnia} from "@ionic-native/insomnia/ngx";
+import { TabsPage } from '../pages/tabs/tabs';
+import {PagebuttonService} from "../pages/service/pagebutton.service";
+import {AllertPageModule} from "../pages/allert/allert.module";
+import {DataService} from "../pages/service/data.service";
+import { StatusBar } from '@ionic-native/status-bar';
+import {AllertDetailPageModule} from "../pages/allert-detail/allert-detail.module";
+import { SplashScreen } from '@ionic-native/splash-screen';
+import {IonicStorageModule } from '@ionic/storage';
+import {QrScannerPageModule} from "../pages/qr-scanner/qr-scanner.module";
+import { QRScanner} from '@ionic-native/qr-scanner';
+import {DrugNamePageModule} from "../pages/drug-name/drug-name.module";
+import {NimabiPageModule} from "../pages/nimabi/nimabi.module";
+import {IllnessPageModule} from "../pages/illness/illness.module";
+import {DrugQrPageModule} from "../pages/drug-qr/drug-qr.module";
+import {ChatPageModule} from "../pages/chat/chat.module";
+import {FeedbackPageModule} from "../pages/feedback/feedback.module";
+import {CommentSearchPageModule} from "../pages/comment-search/comment-search.module";
+import { Media} from '@ionic-native/media';
+import { File } from '@ionic-native/file';
+import {ngModuleJitUrl} from "@angular/compiler";
+import {Vibration} from "@ionic-native/vibration";
+import {MyQuestionPageModule} from "../pages/my-question/my-question.module";
+import {DoctorAdvicePageModule} from "../pages/doctor-advice/doctor-advice.module";
+import {AppMinimize} from "@ionic-native/app-minimize";
+import {OurPageModule} from "../pages/our/our.module";
+import { BackgroundMode } from '@ionic-native/background-mode';
+import {OnePageModule} from "../pages/one/one.module";
+import {TwoPageModule} from "../pages/two/two.module";
+import {YiZhuPageModule} from "../pages/yi-zhu/yi-zhu.module";
+import {TextYiZhuPageModule} from "../pages/text-yi-zhu/text-yi-zhu.module";
+import {PictureYiZhuPageModule} from "../pages/picture-yi-zhu/picture-yi-zhu.module";
+import {BigImgPageModule} from "../pages/big-img/big-img.module";
+import {DarlingPageModule} from "../pages/darling/darling.module";
+
+@NgModule({
+  declarations: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+  ],
+  imports: [
+    IonicStorageModule.forRoot(),
+    BrowserModule,
+    IndexPageModule,
+    InquiryPageModule,
+    QueryPageModule,
+    FindDrugPageModule,
+    CheckDiseasePageModule,
+    DetailPageModule,
+    PharmacyQueryPageModule,
+    MyPhysicianVisitsPageModule,
+    CareAboutPageModule,
+    AlerganPageModule,
+    MyFavoritePageModule,
+    MedicalHistoryPageModule,
+    RegistPageModule,
+    DrugUseRecordPageModule,
+    DrugDetailPageModule,
+    LoginPageModule,
+    PersonelPageModule,
+    NimabiPageModule,
+    AllertPageModule,
+    AllertDetailPageModule,
+    QrScannerPageModule,
+    DrugNamePageModule,
+    QuickQuestionPageModule,
+    IllnessPageModule,
+    MyQuestionPageModule,
+    DoctorAdvicePageModule,
+    ChatPageModule,
+    MessagePageModule,
+    CommentSearchPageModule,
+    FeedbackPageModule,
+    OnePageModule,
+    TwoPageModule,
+    DrugQrPageModule,
+    OurPageModule,
+    PictureYiZhuPageModule,
+    YiZhuPageModule,
+    BigImgPageModule,
+    DarlingPageModule,
+    TextYiZhuPageModule,
+    /*BaiduMapModule.forRoot({ak:'MW9mCN0H06GvIScd1AykKkg6G9qVKtO4'}),*/
+    IonicModule.forRoot(MyApp,{
+        backButtonText: '', iconMode: 'ios',//安卓icon强制使用ios的icon以及样式
+        mode: 'md',//在整个应用程序中使用的模式
+      }
+    ),
+
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage
+  ],
+  providers: [
+    StatusBar,
+    Navbar,
+    SplashScreen,
+    PagebuttonService,
+    Camera,
+    DataService,
+    QRScanner,
+    Media,
+    File,
+    LocalNotifications,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+	  Keyboard,
+    Vibration,
+    AppMinimize,
+    Insomnia,
+    BackgroundMode,
+  ]
+})
+export class AppModule {}

@@ -1,0 +1,35 @@
+<!--
+  Generated template for the MyQuestionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="myquestion">
+    <span class="spa1" (tap)=" nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>健康说</span>
+  </div>
+  <div class="theme">
+    <p >{{title}}</p>
+    <p class="content1" [innerHTML]="content"></p>
+    <div class="picture">
+      <img *ngIf="picture" [src]="picture" alt="" (tap)="big($event)">
+      <img *ngIf="picture2" [src]="picture2" alt="" (tap)="big($event)">
+      <img *ngIf="picture3" [src]="picture3" alt="" (tap)="big($event)">
+    </div>
+    <p style="text-align: right;color: #ddd">{{time}}</p>
+  </div>
+  <ul class="u1">
+    <p class="p2">评论 <span>（{{lenght}}）</span></p>
+    <li *ngFor="let item of comment_list">
+      <p class="p3">
+        <img src="{{item.head_portrait}}" alt="">
+        <span class="span1">{{item.nickname}}</span>
+        <span class="span2">{{item.datetime}}</span>
+      </p>
+      <p class="p5">{{item.content}}</p>
+    </li>
+  </ul>
+</ion-content>

@@ -1,0 +1,103 @@
+page-detail {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .content{
+    background-color: #fff;
+    .text_detail{
+      background-color: #3BD065;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      .spa1 {
+        position: absolute;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        img{
+          margin-top:8px;
+        }
+      }
+      span {
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .artical-top{
+      margin-top: 80px;
+      padding: 20px 10px;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      p{
+        display: flex;
+        img{
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .artical_detail{
+      list-style-type: none;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 20px;
+      li{
+        .artical_top{
+          display: flex;
+          justify-content: space-between;
+          margin:  15px 0;
+          p{
+            width: 65px;
+            display: flex;
+            text-align: right;
+            .img1{
+              width: 20px;
+              height: 20px;
+              margin-right: 5px;
+            }
+            .img2{
+              width: 20px;
+              height: 20px;
+              margin-right: 5px;
+            }
+          }
+        }
+        .artica_center{
+          .headline{
+            text-align: center;
+            margin-bottom: 10px;
+          }
+          .autor{
+            color: #9C9C9C;
+            display: flex;
+            .time{
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+    .mainBody{
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 15px;
+      line-height: 30px;
+      img{
+        margin-top: 30px;
+      }
+    }
+  }
+}

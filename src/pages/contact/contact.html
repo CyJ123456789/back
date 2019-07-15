@@ -1,0 +1,21 @@
+<ion-content class="content">
+  <div class="d-1">
+    <span>药师列表</span>
+  </div>
+  <ul class="physician">
+    <li *ngFor="let item of physicianList;index as i" (tap)="goChatPage(item)">
+      <div>
+        <img [src]="item.picture" alt="">
+        <p>
+          <span class="name">{{item.name}}</span>
+          <span>职称：{{item.professional}}</span>
+          <span class="yiyang">执业时间：{{item.years_working}}</span>
+          <span class="yiyang">擅长：{{item.speciality}}</span>
+        </p>
+      </div>
+      <p class="chat">点击进入一对一聊天界面</p>
+    </li>
+  </ul>
+</ion-content>
+<!--
+(tap)="nav.goPage(chatpage,{message:item})"-->

@@ -1,0 +1,219 @@
+page-home {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .content{
+    background-color: #ddd;
+    position: absolute;
+    .update{
+      width: 70%;
+      height: 20%;
+      background-color: #ddd;
+      position: fixed;
+      left: 15%;
+      border-radius: 8px;
+      top: 40%;
+      display: none;
+      .headline{
+        margin-top: 7%;
+        text-align: center;
+      }
+      .choose{
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+        a{
+          text-decoration:none;
+          color:#333;
+        }
+      }
+    }
+    .d-1{
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      display: flex;
+      background-color:#3BD065 ;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      .fangdajing{
+        position: absolute;
+        left: 18%;
+        top: 11px;
+        width: 20px;
+        height: 20px;
+      }
+      .scan{
+        width: 30px;
+        height: 35px;
+        margin-left:3%;
+        margin-right:3%;
+        margin-top: 8px;
+        img{
+          width: 30px;
+          height: 35px;
+        }
+      }
+      input{
+        background-color: #fff;
+        border: none;
+        border-radius: 16px;
+        margin-top: 7px;
+        width: 72%;
+        padding-left: 30px;
+        box-sizing: border-box;
+        height: 30px;
+      }
+      p{
+        position: relative;
+        margin: 0;
+        margin-top: 8px;
+        margin-left: 3%;
+        padding: 2px;
+        width:26px;
+        height: 26px;
+        background-color:#fff;
+        border-radius: 50%;
+        img{
+          position: absolute;
+          top: 2.5px;
+          left: 2.5px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      h4{
+        position: relative;
+        top: 10%;
+        right: 2%;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        display: none;
+      }
+    }
+    .d-2{
+      margin-top: 45px;
+      padding-top: 15px;
+      height: 100px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      p{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        span{
+          display: block;
+        }
+      }
+    }
+    .d-3{
+      padding: 9.5px;
+      text-align: center;
+      position: relative;
+      margin-top: 10px;
+      width: 100%;
+      height: 110px;
+      background-color: #fff;
+      img{
+        width: 98%;
+        height: 90px;
+      }
+      div{
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        left: 27%;
+        button{
+          background-color: transparent;
+          color: #fff;
+          font-size: 16px;
+        }
+        hr{
+          background-color: #fff;
+          margin-top: 4px;
+        }
+        span{
+          color: #fff;
+          font-size: 13px;
+        }
+      }
+    }
+    .d-4{
+      margin-top: 10px;
+      background-color: #fff;
+    }
+    .d-5{
+      background-color: #fff;
+      width: 100%;
+      padding: 10px;
+      ul{
+        width: 100%;
+        list-style-type: none;
+        li{
+          width: 100%;
+          padding: 15px 0;
+          border-bottom: 1px solid #ddd;
+          .d-6{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .d-7{
+              width: 60%;
+              .autor{
+                margin-bottom: 20px;
+              }
+            }
+            img{
+              width: 35%;
+              height: 70px;
+            }
+          }
+        }
+      }
+      /*ion-list{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        ion-item{
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          .d-6{
+            width: 100%;
+            position: relative;
+            .d-7{
+              width: 100%;
+              height: auto;
+              margin-left: 15px;
+              p{
+                margin: 0;
+                padding: 0;
+                width: 54%;
+                height:auto;
+                word-wrap:break-word;
+                word-break:break-all;
+                overflow: hidden;
+                margin-bottom: 10px;
+              }
+            }
+            img{
+              position:absolute;
+              left: 61%;
+              top: 0;
+              z-index: 3;
+              border-radius: 8px;
+              width: 110px;
+              height: 70px;
+            }
+          }
+        }
+      }*/
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!--
+  Generated template for the FeedbackPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="content">
+  <div class="feedback">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>意见与反馈</span>
+  </div>
+  <div class="nishishui">
+    <p style="margin-bottom: 20px;margin-top: 40px">我的问题</p>
+    <div class="content">
+      <p contenteditable="true" class="text_content" #content></p>
+      <p class="assist" #placehold>请输入200字以内的问题描述以提供更好的帮助</p>
+    </div>
+    <input type="text" placeholder="请输入邮箱(不填也可以)" [(ngModel)]="email">
+  </div>
+  <p class="submit" (tap)="submit()">提交反馈</p>
+</ion-content>

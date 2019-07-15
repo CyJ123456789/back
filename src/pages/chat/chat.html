@@ -1,0 +1,40 @@
+<ion-content class="content">
+  <div class="chat">
+    <p (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </p>
+    <span class="spn1">{{name}}</span>
+  </div>
+  <ul class="u1">
+    <li *ngFor="let item of messageList" [class]="item.class">
+      <span class="time">{{item.datetime}}</span>
+      <div class="item">
+        <div class="d1">
+          <p class="p1"></p>
+        </div>
+        <p class="p2">
+          <span class="span2" [innerHTML]="item.content" (tap)="blow($event)"></span>
+        </p>
+      </div>
+    </li>
+  </ul>
+</ion-content>
+<ion-footer class="footer">
+  <div class="main1">
+    <p>
+      <input type="text" placeholder="发送消息内容" [(ngModel)]="messageContent">
+      <img src="./assets/fonts/send.png" alt="" class="send"  (tap)="issue()">
+    </p>
+    <span (tap)="show1()">
+      <img src="./assets/fonts/open.gif" alt="">
+    </span>
+  </div>
+  <div class="choess" #choess>
+    <p (tap)="photograph1()" class="left">
+      <img src="./assets/fonts/photograph1.gif" alt="">
+    </p>
+    <p (tap)="selectImg()" class="right">
+      <img src="./assets/fonts/picture1.gif" alt="">
+    </p>
+  </div>
+</ion-footer>

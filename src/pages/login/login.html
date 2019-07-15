@@ -1,0 +1,37 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="login">
+    <p (tap)="navservice.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </p>
+    <span class="spn1">登录</span>
+  </div>
+  <!--<div class="top">
+    <img src="../assets/fonts/back.png" alt="" width="30px" height="30px" (tap)=" navservice.backPage()">
+    <span>登录</span>
+  </div>
+  <p class="p4">
+    <img src="../assets/imgs/1.jpg" alt="">
+    <span>用药通</span>
+  </p>-->
+  <div class="d1">
+    <div>
+      <img src="./assets/fonts/phone.png" alt="">
+      <input type="text" placeholder="请输入手机号" [(ngModel)]="phone" (focus)="phonefocus()" >
+      <p #p3 class="p3">该手机号不存在，请重新输入</p>
+    </div>
+    <div class="d2">
+      <input type="text" placeholder="请输入验证码" [(ngModel)]="code"  (focus)="codefocud()">
+      <button #btn (tap)="verified()">获取验证码</button>
+      <p #p4 class="p3">验证码输入错误，请重新输入</p>
+    </div>
+    <button round  (tap)="login()" class="login1">登录</button>
+    <button ion-button full clear (tap)="navservice.goPage(regist)" style="color: #3BD065">前往注册</button>
+  </div>
+  <p style="background-color: transparent;height:5px;margin-top: 200px" #clavier></p>
+</ion-content>

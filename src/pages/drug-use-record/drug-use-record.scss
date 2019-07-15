@@ -1,0 +1,73 @@
+page-drug-use-record {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    position: relative;
+    background-color: #ddd;
+    .druguserecord{
+      background-color: #3BD065;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      span {
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      .spa1 {
+        position: absolute;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        img{
+          margin-top:8px;
+        }
+      }
+    }
+    .u1{
+      list-style-type: none;
+      margin: 0 auto;
+      margin-top: 110px;
+      margin-bottom: 30px;
+      width: 95%;
+      li{
+        border-radius: 8px;
+        background-color: #fff;
+        margin-top: 10px;
+        padding: 10px 0;
+        h5{
+          text-align: center;
+          color: #3BD065;
+          margin-bottom: 10px;
+        }
+        p{
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          border-top:1px solid #ddd;
+          span{
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    .none{
+      position: absolute;
+      top:50%;
+      left: 40%;
+      color: gray;
+      font-size: 17px;
+    }
+  }
+}

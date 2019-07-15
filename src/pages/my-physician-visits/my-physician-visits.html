@@ -1,0 +1,36 @@
+<!--
+  Generated template for the MyPhysicianVisitsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="myphysician_visit">
+    <span class="spn1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>我的健康说</span>
+  </div>
+  <ul class="u1">
+    <li *ngFor="let item of datalist; index as i;" class="item.question_id" (tap)="sum_skip(item,item.question_id)">
+      <p style="margin-bottom: 10px">{{item.title}}</p>
+      <p style="text-align: justify" [innerHTML]="item.content1"></p>
+      <div class="picture">
+        <img *ngIf="item.picture" [src]="item.picture" alt="">
+        <img *ngIf="item.picture2" [src]="item.picture2" alt="">
+        <img *ngIf="item.picture3" [src]="item.picture3" alt="">
+      </div>
+      <p style="text-align: right;color:#ddd">{{item.datetime}}</p>
+      <div class="div1">
+        <p>
+          <img src="./assets/fonts/like.png" alt="">
+          <span>{{item.view_count}}</span>
+        </p>
+        <p class="p5">
+          <img src="./assets/fonts/reply.png" alt="">
+          <span>{{item.num}}</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+</ion-content>

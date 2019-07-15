@@ -1,0 +1,75 @@
+page-nimabi {
+  .content {
+    position: relative;
+    background-color: #ddd;
+    .A-detail {
+      background-color: #3BD065;
+      width: 100%;
+      height: 110px;
+      .spn1{
+        position: absolute;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        img{
+          margin-top:8px;
+        }
+      }
+      span{
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .nmb {
+      width: 95%;
+      border-radius: 8px;
+      position: absolute;
+      z-index: 3;
+      background-color: #fff;
+      p {
+        display: flex;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-top: 14px;
+        height: 50px;
+        img {
+          margin-top: -2px;
+          width: 30px;
+          height: 30px;
+        }
+        span {
+          margin-bottom: 40px;
+        }
+        .sp1{
+          position: absolute;
+          width: 180px;
+          right: 10%;
+          top: 20px;
+          text-align: right;
+        }
+        .img0 {
+          position: absolute;
+          left: 90%;
+        }
+      }
+    }
+    .btn1{
+      width: 40%;
+      height: 35px;
+      display: block;
+      background-color:#3BD065 ;
+      border-radius: 10px;
+      margin: 0 auto;
+      margin-top: 300px;
+    }
+  }
+}

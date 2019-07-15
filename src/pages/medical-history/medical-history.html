@@ -1,0 +1,28 @@
+<!--
+  Generated template for the MedicalHistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+  <div class="medical">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>用药历史</span>
+  </div>
+
+  <ul class="u1">
+    <li *ngFor="let item of kinsfolk" (tap)="nav.goPage(druguserecord,{history:item})">
+      <div class="main_body">
+        <img class="portrait" src="./assets/fonts/portrait.png">
+        <span style="margin-left: 30px;color:#3BD065">{{item.nickname}}用过的药</span>
+        <span style="color: #9C9C9C">更多</span>
+      </div>
+      <h5 class="speed">
+        <img src="./assets/fonts/7.png" alt="">
+      </h5>
+    </li>
+  </ul>
+</ion-content>

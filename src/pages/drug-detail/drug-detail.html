@@ -1,0 +1,68 @@
+<!--
+  Generated template for the DrugDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="drug-detail">
+    <span class="spn1" (tap)="backPrive()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>{{drug_name_cn}}</span>
+  </div>
+  <div class="d-2">
+    <p class="p-1">请仔细阅读说明书并在医生的指导下使用</p>
+  </div>
+  <div class="OTC">
+    <p #OTC>处方药</p>
+  </div>
+  <ul class="u1">
+    <li class="l1">
+      <div class="p1">【药品名称】</div>
+      <pre>通用名称：{{drug_name_common}}</pre>
+      <pre>英文名称：{{drug_name_en }}</pre>
+      <pre>汉语拼音：{{drug_name_py}}</pre>
+    </li>
+    <li>
+      <div class="p1">【成分】</div>
+      <pre>{{ingredients}}</pre>
+    </li>
+    <li>
+      <div class="p1">【适应症】</div>
+      <pre [innerHTML]="indication"></pre>
+    </li>
+    <li>
+      <div class="p1">【用法用量】</div>
+      <pre [innerHTML]="dosage"></pre>
+    </li>
+    <li>
+      <div class="p1">【不良反应】</div>
+      <pre [innerHTML]="reactions"></pre>
+    </li>
+    <li>
+      <div class="p1">【禁忌】</div>
+      <pre [innerHTML]="contraindications"></pre>
+    </li>
+    <li>
+      <div class="p1">【注意事项】</div>
+      <pre [innerHTML]="precautions"></pre>
+    </li>
+    <li>
+      <div class="p1">【药物相互作用】</div>
+      <pre [innerHTML]="drug_interactions"></pre>
+    </li>
+    <li>
+      <div class="p1">【药理作用】</div>
+      <pre [innerHTML]="mechanism_action"></pre>
+    </li>
+    <li>
+      <div class="p1">【批准文号】</div>
+      <pre [innerHTML]="approve_code"></pre>
+    </li>
+    <li>
+      <div class="p1">【生产企业】</div>
+      <pre>{{company_name}}</pre>
+    </li>
+  </ul>
+</ion-content>

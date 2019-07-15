@@ -1,0 +1,68 @@
+<!--
+  Generated template for the QueryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="d-1">
+    <img src="./assets/imgs/search.png" alt="" class="fangdajing">
+    <input  type="text"  placeholder="搜索疾病/药品" class="input1" (keyup)="change()" [(ngModel)]="search" #input>
+    <span (tap)="nav.backPage()">取消</span>
+  </div>
+  <p class="select">
+    <span (tap)="option($event)" #drug class="first">药名</span>
+    <span (tap)="option($event)" #symptom>症状/疾病</span>
+  </p>
+  <div class="d-3" #div>
+    <ul>
+      <p>药品</p>
+      <li *ngFor="let item of list" (tap)="nav.goPage(drugDetail,{detail:item})">
+        <img src="./assets/fonts/drug.png" alt="">
+        {{item.drug_name_show}}
+      </li>
+      <span style="display: none" #span>没有搜索到相关的药品</span>
+      <p style="border: none;text-align: center" #p (tap)="drugload()">加载更多</p>
+    </ul>
+    <hr style="border-bottom: 3px solid #EAEAEA">
+    <ul>
+      <p>症状</p>
+      <li *ngFor="let item of list7" (tap)="nav.goPage(drugDetail,{detail:item})">
+        <img src="./assets/fonts/drug.png" alt="">
+        {{item.drug_name_show}}
+      </li>
+      <span style="display: none" #span2>没有搜索到相关的药品</span>
+      <p style="border: none;text-align: center" #p2 (tap)="symptomload()">加载更多</p>
+    </ul>
+    <hr style="border-bottom: 3px solid #EAEAEA">
+    <ul #clavier>
+      <p>疾病</p>
+      <li *ngFor="let item of item1" (tap)="nav.goPage(illness,{illness:item})">
+        <img src="./assets/fonts/illness.png" alt="">
+        {{item.disease_name_cn}}
+      </li>
+      <span style="display: none" #span1>没有搜索到相关的疾病</span>
+      <p style="border: none;text-align: center" #p1 (tap)="illnessload()">加载更多</p>
+    </ul>
+  </div>
+  <!--<div class="d-2">
+    <p>搜索历史</p>
+    <ul>
+      <li>白加黑</li>
+      <li>心泰康克</li>
+      <li>布洛芬混悬滴剂</li>
+    </ul>
+  </div>
+  <div class="d-4">
+    <p>热门搜索</p>
+    <ul>
+      <li>发烧</li>
+      <li>感冒</li>
+      <li>流感</li>
+      <li>咳嗽</li>
+      <Li>过敏</Li>
+      <li>腹痛</li>
+      <li>便秘</li>
+    </ul>
+  </div>-->
+</ion-content>

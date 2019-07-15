@@ -1,0 +1,65 @@
+page-message {
+  .content{
+    background-color: #fff;
+    position: relative;
+    .message{
+      background-color: #3BD065;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      span{
+        position: absolute;
+        top:25px;
+        color: #fff;
+        font-size: 2rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .u1{
+      margin: 0;
+      padding: 0;
+      margin-top: 80px;
+      list-style-type:none;
+      li{
+        display: flex;
+        padding: 0 10px;
+        .p1{
+          width:50px;
+          height: 50px;
+          margin-right: 15px;
+          img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+        .p2{
+          width: 80%;
+          span{
+            display:block;
+          }
+          .span1{
+            font-size: 1.6rem;
+            font-weight: bolder;
+          }
+          .span2{
+            margin-top: 5px;
+            color: #666666;
+            text-align: justify;
+          }
+        }
+      }
+    }
+    p.recode{
+      position: absolute;
+      top: 45%;
+      left: 38%;
+      color: #666666;
+    }
+  }
+}

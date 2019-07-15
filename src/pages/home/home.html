@@ -1,0 +1,167 @@
+<ion-content class="content">
+  <div class="d-1">
+    <h5 class="scan" (tap)="click1()">
+      <img src="./assets/fonts/scan.png" alt="">
+    </h5>
+    <img src="./assets/imgs/search.png" alt="" class="fangdajing">
+    <input type="text" (focus)="nav.goPage(querypage)" placeholder="搜索疾病/药品" class="input1" [(ngModel)]="drug">
+    <p (tap)="alertlist()">
+      <img src="./assets/imgs/alert2.png" alt="" class="img2">
+    </p>
+    <h4 #h4></h4>
+  </div>
+  <div class="d-2">
+    <p (click)="alert1()">
+      <ion-icon name="ALert"></ion-icon>
+      <span>用药提醒</span>
+    </p>
+    <p (click)="nav.goPage(find_drug)">
+      <ion-icon name="Search"></ion-icon>
+      <span>查药品</span>
+    </p>
+    <p (click)="nav.goPage(check_disease)">
+      <ion-icon name="jibing"></ion-icon>
+      <span>查疾病</span>
+    </p>
+    <p (click)="nav.goPage(pharmacy_query)">
+      <ion-icon name="yaofang"></ion-icon>
+      <span>药房查询</span>
+    </p>
+  </div>
+  <div class="d-3" (click)="quick1()">
+    <img src="./assets/imgs/beijing.png" alt="">
+    <div>
+      <button>健康说</button>
+      <hr>
+      <span>说说您感兴趣的健康话题</span>
+    </div>
+  </div>
+  <ion-segment [(ngModel)]="pet" class="d-4" >
+    <ion-segment-button value="1" (click)="click()">
+      药物资讯
+    </ion-segment-button>
+    <ion-segment-button value="2" (click)="click()">
+      医疗资讯
+    </ion-segment-button>
+    <ion-segment-button value="3" (click)="click()">
+      健康管理
+    </ion-segment-button>
+    <ion-segment-button value="4" (click)="click()">
+      其它相关
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="pet" class="d-5">
+    <ul *ngSwitchCase="'1'">
+      <li (click)="nav.goPage(detail,{title:item.article_id})" *ngFor="let item of data;index as i">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item.headline}}</p>
+            <p class="time">编辑:{{item.author}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.creationtime}}</p>
+          </div>
+          <img [src]="item.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <li (click)="nav.goPage(detail,{title:item1.article_id})" *ngFor="let item1 of data2;index as i" class="item1">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item1.headline}}</p>
+            <p>编辑:{{item1.author}}&nbsp;&nbsp;&nbsp;{{item1.creationtime}}</p>
+          </div>
+          <img [src]="item1.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="加载更多。。。。">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ul>
+    <ul *ngSwitchCase="'2'">
+      <li (click)="nav.goPage(detail,{title:item.article_id})" no-lines *ngFor="let item of data1;index as i">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item.headline}}</p>
+            <p>{{item.author}}&nbsp;&nbsp;&nbsp;{{item.creationtime}}</p>
+          </div>
+          <img [src]="item.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <li (click)="nav.goPage(detail,{title:item1.article_id})" *ngFor="let item1 of data3;index as i" class="item1">
+        <div class="d-6">
+          <div class="d-7">
+            <p
+            class="autor">{{item1.headline}}</p>
+            <p>{{item1.author}}&nbsp;&nbsp;&nbsp;{{item1.creationtime}}</p>
+          </div>
+          <img [src]="item1.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <ion-infinite-scroll (ionInfinite)="doInfinite1($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="加载更多。。。。">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ul>
+    <ul *ngSwitchCase="'3'">
+      <li (click)="nav.goPage(detail,{title:item.article_id})" no-lines *ngFor="let item of data1;index as i">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item.headline}}</p>
+            <p>{{item.author}}&nbsp;&nbsp;&nbsp;{{item.creationtime}}</p>
+          </div>
+          <img [src]="item.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <li (click)="nav.goPage(detail,{title:item1.article_id})" *ngFor="let item1 of data4;index as i" class="item1">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item1.headline}}</p>
+            <p>{{item1.author}}&nbsp;&nbsp;&nbsp;{{item1.creationtime}}</p>
+          </div>
+          <img [src]="item1.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <ion-infinite-scroll (ionInfinite)="doInfinite2($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="加载更多。。。。">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ul>
+    <ul *ngSwitchCase="'4'">
+      <li (click)="nav.goPage(detail,{title:item.article_id})" no-lines *ngFor="let item of data1;index as i">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="autor">{{item.headline}}</p>
+            <p>{{item.author}}&nbsp;&nbsp;&nbsp;{{item.creationtime}}</p>
+          </div>
+          <img [src]="item.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <li (click)="nav.goPage(detail,{title:item1.article_id})" *ngFor="let item1 of data5;index as i" class="item1">
+        <div class="d-6">
+          <div class="d-7">
+            <p class="">{{item1.headline}}</p>
+            <p>{{item1.author}}&nbsp;&nbsp;&nbsp;{{item1.creationtime}}</p>
+          </div>
+          <img [src]="item1.picture" alt="" width="140px" height="90px">
+        </div>
+      </li>
+      <ion-infinite-scroll (ionInfinite)="doInfinite3($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="加载更多。。。。">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ul>
+  </div>
+  <div class="update">
+    <p class="headline">有新的版本，是否更新</p>
+    <p class="choose">
+      <span>暂不更新</span>
+      <a href="http://m.app.so.com/detail/index?from=qing&id=4027002">立即更新</a>
+    </p>
+  </div>
+</ion-content>

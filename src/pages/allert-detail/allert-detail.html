@@ -1,0 +1,84 @@
+<!--
+  Generated template for the AllertDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="drug_alert">
+    <span class="spa1" (tap)="nav.backPage()">
+      <img src="./assets/fonts/back.png" alt="" width="14px" height="16px">
+    </span>
+    <span>药品添加</span>
+  </div>
+  <div class="alert_top">
+    <div class="drug_name">
+      <p class="drug">
+        <img src="./assets/fonts/drug_img.png" alt="">
+      </p>
+      <input type="text" placeholder="请输入药品名称" [(ngModel)]="drug" #input (blur)="onblur()" (keyup)="change()">
+      <p class="qrscanner" (tap)="click()">
+        <img src="./assets/imgs/qr.png" alt="">
+      </p>
+    </div>
+    <div class="show_err">
+      <p class="clock">
+        <img src="./assets/fonts/clock.png" alt="">
+      </p>
+      <p class="clock_text">用药提醒</p>
+    </div>
+    <ul>
+      <li *ngFor="let item of time;index as i">
+        <p class="zhuyi">提醒{{i+1}}</p>
+        <img src="./assets/fonts/cha.png" alt="" width="15px" height="15px" (tap)="cancel(i)" *ngIf="i!=0">
+        <ion-datetime class="know" *ngIf="i===0" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time1"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===1" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time2"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===2" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time3"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===3" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time4"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===4" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time5"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===5" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time6"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===6" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time7"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===7" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time8"></ion-datetime>
+        <ion-datetime class="know" *ngIf="i===8" displayFormat="HH:mm" cancelText="取消" doneText="确定" [(ngModel)]="time9"></ion-datetime>
+      </li>
+      <li #more1>
+        <p>更多</p>
+        <p class="more" (tap)="more()">
+          <img src="./assets/fonts/more.png" alt="">
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="alert_center">
+    <div class="emphasis">
+      <p class="font_size">服用周期</p>
+      <div class="emphasis-top">
+        <input type="text" placeholder="几" [(ngModel)]="Taking_cycle">
+        <p class="font_size1">天</p>
+      </div>
+    </div>
+    <div class="center">
+      <p class="font_size">服用频率</p>
+      <div class="emphasis-center">
+        <p>每天</p>
+        <input type="text" placeholder="几" [(ngModel)]="index">
+        <p>次</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <p class="font_size">服用剂量</p>
+      <div class="emphasis-bottom">
+        <p>每次</p>
+        <input type="text" placeholder="几" [(ngModel)]="doses_quantity">
+        <p>粒/片/勺</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn1" (tap)="submit()">提交</button>
+  <p #clavier></p>
+  <div class="drugList" #show>
+    <ul>
+      <li *ngFor="let item of drugList" (tap)="commen(item.drug_id)">{{item.drug_name_show}}</li>
+    </ul>
+  </div>
+</ion-content>

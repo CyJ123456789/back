@@ -1,0 +1,47 @@
+page-one {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .content{
+    background-color: #fff;
+    position: relative;
+    .one{
+      background-color: #3BD065;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      height: 80px;
+      span {
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      .spn1{
+        position: absolute;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        img{
+          margin-top:8px;
+        }
+      }
+    }
+    ul{
+      list-style-type: none;
+      margin-top: 83px;
+      li{
+        padding: 10px 0;
+        margin-left: 15px;
+      }
+    }
+  }
+}

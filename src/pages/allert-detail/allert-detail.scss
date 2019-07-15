@@ -1,0 +1,239 @@
+page-allert-detail {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    position: relative;
+    background-color: #ddd;
+    .drug_alert{
+      background-color: #3BD065;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      span {
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      .spa1{
+        position: absolute;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        text-align: center;
+        img{
+          margin-top:8px;
+        }
+      }
+    }
+    .alert_top{
+      width: 95%;
+      margin: 10px auto;
+      border-radius: 8px;
+      background-color: #fff;
+      padding:10px;
+      margin-top: 90px;
+      .drug_name{
+        display: flex;
+        .drug{
+          width: 30px;
+          height: 30px;
+          margin-right: 15px;
+          img{
+            width: 30px;
+            height: 30px;
+          }
+        }
+        input{
+          width: 70%;
+          padding-left: 10px;
+          border: 1px solid #666666;
+          border-radius: 5px;
+        }
+        .qrscanner{
+          margin-left: 15px;
+          width: 28px;
+          height: 28px;
+          img{
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+      .show_err{
+        margin-top: 20px;
+        display: flex;
+        .clock{
+          margin: 0;
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          img{
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .clock_text{
+          margin-left: 13px;
+          height: 30px;
+          line-height: 30px;
+          box-sizing: border-box;
+          font-size: 1.7rem;
+        }
+      }
+      ul{
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        list-style-type: none;
+        li{
+          width:28%;
+          position: relative;
+          margin-bottom: 8px;
+          .more{
+            width:100%;
+            height:30px;
+            position: relative;
+            img{
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+          img{
+            position: absolute;
+            top: 0;
+            right: 10%;
+          }
+          p{
+            text-align: center;
+            margin-bottom: 3px;
+          }
+          .zhuyi{
+            text-align: left;
+            width: 50%;
+            margin-left: 5px;
+          }
+          .know{
+            position: relative;
+            background-color: orange;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            padding: 0;
+            padding-top: 6px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    .alert_center{
+      width: 95%;
+      padding: 30px 10px;
+      background-color: #fff;
+      margin: 0 auto;
+      border-radius: 8px;
+      .emphasis{
+        display: flex;
+        .emphasis-top{
+          width: 70%;
+          display: flex;
+          padding-left:61%;
+          input{
+            border: none;
+            text-align: center;
+            width: 30px;
+
+          }
+        }
+        .font_size{
+          width: 23%;
+          font-size: 1.6rem;
+        }
+      }
+      div.center{
+        border-bottom: 1px solid #D6D6D6;
+        border-top:1px solid #D6D6D6;
+        padding: 20px 0;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: nowrap;
+        .font_size{
+          width: 23%;
+          font-size: 1.6rem;
+        }
+        .emphasis-center{
+          padding-left: 53%;
+          width: 78%;
+          display: flex;
+          input{
+            width: 30px;
+            border: none;
+            text-align: center;
+          }
+        }
+      }
+      .bottom{
+        display: flex;
+        .font_size{
+          width: 23%;
+          font-size: 1.6rem;
+        }
+        .emphasis-bottom{
+          width:78%;
+          padding-left: 40%;
+          display: flex;
+          input{
+            width: 30px;
+            text-align: center;
+            border: none;
+          }
+        }
+      }
+    }
+    .btn1{
+      width: 40%;
+      height: 35px;
+      color: #fff;
+      background-color: #3BD065;
+      border: none;
+      border-radius: 6px;
+      display: block;
+      margin: 40px auto;
+    }
+    .drugList{
+      background-color:#fff;
+      opacity: .95;
+      position: absolute;
+      top: 140px;
+      left: 2.5%;
+      width: 95%;
+      height: 80%;
+      z-index: 5;
+      display: none;
+      ul{
+        width: 65%;
+        margin: 0 auto;
+        list-style-type: none;
+        background-color: #ddd;
+        li{
+          text-align: center;
+          padding: 10px 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
